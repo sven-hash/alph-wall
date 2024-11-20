@@ -103,8 +103,8 @@ useEffect(() => {
 
      //const initialPixels = await getPx();
      
-     console.log(initialPixels)
-     setPixels(initialPixels);
+     //console.log(initialPixels)
+     //setPixels(initialPixels);
      setLoading(false); // Stop loading once initialized
    };
 
