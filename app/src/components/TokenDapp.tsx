@@ -101,7 +101,7 @@ useEffect(() => {
    const initializePixels = async () => {
       setContractState(await contractFactory.fetchState())
 
-     const initialPixels = await getPx();
+     //const initialPixels = await getPx();
      
      console.log(initialPixels)
      setPixels(initialPixels);
@@ -141,8 +141,8 @@ console.log(contractState)
         const result = await mintPx(
           signer,
           contractState.fields.tokenIdToBurn,
-          BigInt(x - 1),  // Convert to BigInt after subtraction
-          BigInt(y - 1),  // Convert to BigInt after subtraction
+          x,  // Convert to BigInt after subtraction
+          y,  // Convert to BigInt after subtraction
           selectedColor,
           contractState.fields.burnMint
         );
