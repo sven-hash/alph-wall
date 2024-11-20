@@ -108,13 +108,13 @@ export async function getPx() {
  
 
 export const getIndexFromCoordinates = (x: number, y: number) => {
-   const index = (y - 1) * gridSize + (x - 1);
+   const index = (y) * gridSize + (x);
    return index;
  };
 
  export const getGridCoordinates = (index: number) => {
-   const x = (index % gridSize) + 1;
-   const y = Math.floor(index / gridSize) + 1;
+   const x = (index % gridSize);
+   const y = Math.floor(index / gridSize);
    return [x, y];
  };
 
